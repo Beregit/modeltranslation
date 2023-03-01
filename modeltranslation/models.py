@@ -122,7 +122,7 @@ class FieldTranslation(models.Model):
 	last_update_datetime = models.DateTimeField(verbose_name=u"Last update date and time of this translation")
 
 	## Creator user
-	creator_user = models.ForeignKey(User, null=True, default=None, related_name='model_translation', verbose_name=u"User translator", help_text=u"User that created last translation version")
+	creator_user = models.ForeignKey(User, null=True, default=None, related_name='model_translation', verbose_name=u"User translator", help_text=u"User that created last translation version", on_delete=models.CASCADE)
 
 	## Metainformation of FieldTranslation
 	class Meta:
